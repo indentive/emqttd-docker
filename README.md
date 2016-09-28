@@ -1,8 +1,8 @@
-# EMQTTD Docker
+# Emqttd Docker
 
-This repository contains the [Dockerfile](src/Dockerfile) of EMQTTD used by [Mainflux IoT
-Platform][2]. Before proceeding, please check the EMQTTD's [official website][1] for more
-information about the product.
+This repository contains the [Dockerfile](src/Dockerfile) of Emqttd used by [Mainflux IoT
+Platform][2]. Before proceeding, please check the Emqttd's [official website][1] for more
+information about the project.
 
 ### Usage
 To start up the container, execute the following commands inside the command line:
