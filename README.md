@@ -28,10 +28,5 @@ For quick questions and suggestions you can also use GitHub Issues.
 #### Twitter
 [@mainflux](https://twitter.com/mainflux)
 
-### Authors
-Main architect and BDFL of Mainflux project is [@drasko](https://github.com/drasko).
-
-Maintainers are listed in [MAINTAINERS](MAINTAINERS) file.
-
 ### License
 [Apache License, version 2.0](LICENSE)
