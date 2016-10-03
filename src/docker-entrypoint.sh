@@ -5,7 +5,7 @@ set -e
 EMQTTD_DIR=/opt/emqttd/bin
 
 if [ "$1" = 'start-admin' ]; then
-    $EMQTTD_DIR/emqttd_ctl
+    $EMQTTD_DIR/emqttd_ctl "$@"
 fi
 
 if [ "$1" = 'start-daemon' ]; then
