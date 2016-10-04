@@ -3,7 +3,6 @@
 # common variables
 BUILD_DEPS='wget unzip'
 EMQTTD_URL=http://emqtt.io/downloads/stable/debian
-EMQTTD_DIR=/opt/emqttd
 ARCHIVE=/opt/temp.zip
 
 # install system dependencies
