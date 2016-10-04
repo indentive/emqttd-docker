@@ -5,9 +5,17 @@ set -e
 EMQTTD_DIR=/opt/emqttd
 
 if [ "$1" = 'start-daemon' ]; then
-    # copy configuration (daemon and plugins)
-    cp -ur /etc/emqttd/config/* $EMQTTD_DIR/etc
-    cp -ur /etc/emqttd/plugins/* $EMQTTD_DIR/plugins
+    # copy daemon configuration
+    CONFIG_VOLUME=/etc/emqttd/config
+    if [ "$(ls -A $CONFIG_VOLUME)" ]; then
+        cp -ur $CONFIG_VOLUME/* $EMQTTD_DIR/etc
+    fi
+
+    # copy plugins configuration
+    PLUGINS_VOLUME=/etc/emqttd/plugins
+    if [ "$(ls -A $PLUGINS_VOLUME)" ]; then
+        cp -ur $PLUGINS_VOLUME/* $EMQTTD_DIR/plugins
+    fi
 
     # start daemon
     $EMQTTD_DIR/bin/emqttd start
