@@ -11,7 +11,7 @@ To start up the container, execute the following commands inside the command lin
 git clone https://github.com/Mainflux/emqttd-docker.git && cd emqttd-docker
 cd src
 docker build -t emqttd .
-docker run -it -p 1883:1883 -p 18083:18083 emqttd
+docker run -it -p 1883:1883 -p 8083:8083 -p 18083:18083 emqttd
 ```
 
 Broker's behavior can be customized via editing its configuration and/or adding plugins. In both
@@ -23,7 +23,7 @@ following snippet shows how to build and start the container with the custom con
 git clone https://github.com/Mainflux/emqttd-docker.git && cd emqttd-docker
 cd src
 docker build -t emqttd .
-docker run -it -p 1883:1883 -p 18083:18083 -v [host config directory]:/etc/emqttd/config -v [host
+docker run -it -p 1883:1883 -p 8083:8083 -p 18083:18083 -v [host config directory]:/etc/emqttd/config -v [host
 plugins directory]:/etc/emqttd/plugins emqttd
 ```
 
