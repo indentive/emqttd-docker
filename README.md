@@ -40,6 +40,8 @@ the `emqttd_auth_http` plugin, the following terms must be met:
     emqttd_auth_http
     ```
 
+> Format of the `plugins.list` is line-separated list, i.e. one plugin per line
+
 ### Documentation
 Development documentation can be found on our [wiki][mainflux-wiki].
 
