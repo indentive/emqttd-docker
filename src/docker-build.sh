@@ -3,7 +3,7 @@
 # common variables
 BUILD_DEPS='wget unzip'
 RUNTIME_DEPS='openssl'
-EMQTTD_URL=http://emqtt.io/downloads/stable/debian
+EMQTTD_URL=http://emqtt.io/downloads/latest/debian
 ARCHIVE=/opt/temp.zip
 
 # install system dependencies
