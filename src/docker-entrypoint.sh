@@ -28,12 +28,10 @@ if [ "$1" = 'start-daemon' ]; then
             cp -ur $PLUGINS_VOLUME/* $EMQTTD_DIR/plugins
         fi
 
-        cd $EMQTTD_DIR/plugins
-
-        while read plugin; do
-            echo $plugin
-            $EMQTTD_DIR/bin/emqttd_ctl plugins load $plugin
-        done <$PLUGINS_LIST
+        while IFS= read -r plugin; do
+            echo "Loading $plugin..."
+            $EMQTTD_DIR/bin/emqttd_ctl plugins load $plugin &
+        done < $PLUGINS_LIST
     fi
 
     #
