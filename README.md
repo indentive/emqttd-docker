@@ -33,9 +33,8 @@ EMQTTD uses plugins to extend its default behavior. However, the plugins must be
 `emqttd_ctl` before they can be used. To load plugins into the container, the following steps must
 be completed:
 
-- Make sure to download plugins and place them into the `plugins` volume. This step can be skipped
-  if the plugin is already available as part of the broker's release, and the default configuration
-  satisfies all the requirements.
+- Make sure to place the plugin configuration into the `plugins` volume. Please consult the
+  [official website][emqttd-config] about the list of supported plugins.
 - Provide the `plugins.list` file through the `config` volume. This file should contain list of all
   plugins to be loaded, with each plugin name given in separate line.
 
@@ -68,7 +67,6 @@ docker run --name emqttd -v [host config directory]:/etc/emqttd/config -v [host 
 
 [emqttd-official]: http://emqtt.io
 [emqttd-config]: http://emqtt.io/docs/v2/config.html
-[emqttd-plugins]: http://emqtt.io/docs/v2/plugins.html
 [mainflux]: https://github.com/Mainflux/mainflux
 [mainflux-google]: https://groups.google.com/forum/#!forum/mainflux
 [mainflux-gitter]: https://gitter.im/Mainflux/mainflux?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
