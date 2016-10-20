@@ -38,12 +38,12 @@ be completed:
 - Provide the `plugins.list` file through the `config` volume. This file should contain list of all
   plugins to be loaded, with each plugin name given in separate line.
 
-For example, to load `emqttd_auth_http` and `emqttd_plugin_mysql` plugins, the `plugins.list` file
+For example, to load `emq_auth_http` and `emq_auth_mysql` plugins, the `plugins.list` file
 would have the following contents:
 
 ```
-emqttd_auth_http
-emqttd_plugin_mysql
+emq_auth_http
+emq_auth_mysql
 ```
 
 Once the setup is completed, execute the following command:
